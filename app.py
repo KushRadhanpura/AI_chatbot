@@ -248,8 +248,8 @@ if st.session_state.messages:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: gray; padding: 20px;'>
-    <p>🚀 <b>AI Study Buddy</b> - Advanced AI-Powered Learning Platform</p>
-    <p style='font-size: 0.9em;'>Developed by <b>Kush Radhanpura</b> | IBM Edunet Internship Project</p>
-    <p style='font-size: 0.85em;'>Made with ❤️ using Streamlit & AI</p>
+    <p>🚀 <b>AI Study Buddy</b> - Intelligent Learning Platform</p>
+    <p style='font-size: 0.9em;'>Developed by <b>Kush Radhanpura</b> | IBM Edunet Internship Project 2026</p>
+    <p style='font-size: 0.85em;'>🎓 Empowering Students to Learn Better</p>
 </div>
 """, unsafe_allow_html=True)
