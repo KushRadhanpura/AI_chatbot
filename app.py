@@ -12,11 +12,16 @@ st.set_page_config(
 )
 
 # Configure Gemini API
-# Try to get API key from Streamlit secrets first (for deployment), then use hardcoded (for local)
+# Get API key from Streamlit secrets (for deployment) or environment variable
 try:
     GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 except:
-    GEMINI_API_KEY = "AIzaSyD9IPnBud8-_cXeDGTzQCsfsgfuZMic-6U"
+    import os
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+    
+if not GEMINI_API_KEY:
+    st.error("⚠️ API Key not configured. Please add GEMINI_API_KEY to Streamlit secrets or environment variables.")
+    st.stop()
 
 genai.configure(api_key=GEMINI_API_KEY)
 
